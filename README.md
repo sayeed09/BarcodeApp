@@ -1,3 +1,3 @@
 ### Barcode Scaaning App for Ticketing Services  ###
 
-- Android App developed using React Native 
+- Android App developed using React Native
