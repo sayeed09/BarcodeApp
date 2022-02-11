@@ -16,6 +16,6 @@ jobs:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
       uses: abinoda/slack-action@master
       with:
-        args: '{\"channel\":\"C032C8WFAES\",\"text\":\"Hello world\"}'
+        args: '{\"channel\":\"C032C8WFAES\",\"text\":\"Hello world ${{ github.repository }} \"}'
 
 
