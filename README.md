@@ -1,3 +1,3 @@
-### Barcode Scaaning App for Zoonga Ticketing Services  ###
+### Barcode Scaaning App for Ticketing Services  ###
 
 - Android App developed using React Native 
