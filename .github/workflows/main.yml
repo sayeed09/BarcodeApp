@@ -1,7 +1,7 @@
 name: Slack Notifications
 
 on:
-  pull_request:
+  push:
     branches: [ master ]
 
 jobs:
@@ -10,9 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - run: echo "💡 The ${{ github.repository }} repository, PR ${{ github.event.pull_request.title }} has been cloned to the runner."
     - name: Notify slack
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
       uses: abinoda/slack-action@master
       with:
-        args: '{\"channel\":\"C032C8WFAES\",\"text\":\"Hello world\"}'
+        args: '{\"channel\":\"C032C8WFAES\",\"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"*Pull Request:* \"}},{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"*Who?:* ${{ github.event.pull_request.user.login }}\n*Request State:* \"}},{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"<|View Pull Request>\"}}]}'
+
+
