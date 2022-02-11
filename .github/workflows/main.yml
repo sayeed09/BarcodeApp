@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: echo "💡 The ${{ github.repository }} repository, PR ${{ github.event.pull_request.title }} has been cloned to the runner."
+    - run: echo "💡 The ${{ github.repository }} repository, PR ${{ github.actor }} has been cloned to the runner."
     - name: Notify slack
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
