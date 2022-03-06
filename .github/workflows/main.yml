@@ -16,7 +16,7 @@ jobs:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
       uses: abinoda/slack-action@master
       with:
-        args: '{\"channel\":\"C032C8WFAES\",\"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"*Commit Pushed:* ${{ github.event.head_commit.message }}\"}},{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"*Contributor :* ${{ github.actor }}\n*Repo:* ${{ github.repository }}\"}},{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\"}}]}' 
+        args: '{\"channel\":\"C032C8WFAES\",\"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"*Commit Pushed:* ${{ github.event.head_commit.message }}\"}},{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"*Contributor :* ${{ github.actor }}\n*Repo:* ${{ github.repository }}\"}}\"}}]}' 
 
 
 
